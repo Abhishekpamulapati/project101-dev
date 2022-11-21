@@ -1,0 +1,49 @@
+{
+	"name": "Ds_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Ls_AzureBlobStorage_dev",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "movies.csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "University",
+				"type": "String"
+			},
+			{
+				"name": "Difficulty Level",
+				"type": "String"
+			},
+			{
+				"name": "Link",
+				"type": "String"
+			},
+			{
+				"name": "About",
+				"type": "String"
+			},
+			{
+				"name": "Course Description",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
